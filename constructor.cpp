@@ -9,3 +9,6 @@ public:
 
 mahasiswa::mahasiswa()
 {
+    cout << "Constructor Terpanggil" << endl;
+};
+
