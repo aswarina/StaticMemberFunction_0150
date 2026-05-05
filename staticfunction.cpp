@@ -2,11 +2,10 @@
 #include <string>
 using namespace std;
 
-
 class mahasiswa {
-
 private:
     static int nim;
+
 public:
     int id;
     string nama;
@@ -14,46 +13,46 @@ public:
     void setID();
     void printAll();
 
-    static void setNim(int pnim) {
+    static void setNim(int pnim){
         nim = pnim;
-    };
+    }
 
-    static int getNim() {
+    static int getNim(){
         return nim;
     }
 
-    Mahasiswa(string pnama) ::nama(pnama) {
+    mahasiswa(string pnama) : nama(pnama){
         setID();
-    };
+    }
 };
 
-int Mahasiswa::nim = 0;
+int mahasiswa::nim = 0;
 
-void Mahasiswa::setID() {
+void mahasiswa::setID(){
     id = ++nim;
 }
 
-void Mahasiswa::printAll(){
-    cout << "ID =" << id << endl;
-    cout << "Nama =" << nama << endl;
+void mahasiswa::printAll(){
+    cout << "ID = " << id << endl;
+    cout << "nama = " << nama << endl;
     cout << endl;
 }
 
 int main() {
-    Mahasiswa mhs1("Sri Dadi");
-    Mahasiswa mhs2("Budi Jatmiko");
+    mahasiswa mhs1("udin");
+    mahasiswa mhs2("tapir");
 
-    Mahasiswa::setNim(9);
-    Mahasiswa mhs3("Andi Janu");
-    Mahasiswa mhs4("Joko Wahono");
+    mahasiswa::setNim(9);
+
+    mahasiswa mhs3("maria");
+    mahasiswa mhs4("yohanes");
 
     mhs1.printAll();
     mhs2.printAll();
     mhs3.printAll();
     mhs4.printAll();
 
-    cout << "Akses dari luar object =" << Mahasiswa::getNim() << endl;
-    system("pause");
+    cout << "akses dari luar objek = " << mahasiswa::getNim() << endl;
 
     return 0;
 }
